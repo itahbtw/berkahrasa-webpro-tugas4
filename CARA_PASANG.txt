@@ -1,0 +1,13 @@
+BERKAH RASA — PAKET KODE WEBSITE (Tugas 4 / UAS WebPro)
+
+1. Ekstrak seluruh isi ZIP ke folder htdocs XAMPP atau docroot hosting.
+2. Salin .env.example menjadi .env, lalu sesuaikan DB_HOST/DB_NAME/DB_USER/DB_PASS.
+3. Buat database, lalu impor database/schema.sql (untuk instalasi baru).
+   Untuk upgrade: jalankan migrate_v4.sql, migrate_v5.sql, migrate_v6.sql secara berurutan.
+4. Pastikan folder gambar/uploads dan logs dapat ditulis PHP.
+5. Buka /index.php. Panel admin: /admin/login.php
+   Akun demo: admin/admin123, operator01/Operator#2026, budi01/Budi#2026.
+   Ganti password demo sebelum produksi.
+
+Catatan: file .env sengaja TIDAK disertakan agar kredensial tidak bocor.
+Dokumen tambahan ada di folder docs/. Pengujian: php tests/run.php.

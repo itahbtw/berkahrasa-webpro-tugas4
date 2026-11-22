@@ -1,0 +1,21 @@
+# Folder unggahan hanya boleh berisi gambar.
+# Tolak eksekusi skrip meskipun file berhasil diunggah.
+Options -Indexes -ExecCGI
+
+<FilesMatch "\.(php|phtml|phar|php3|php4|php5|php7|php8|cgi|pl|py|sh|shtml|htaccess)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Paksa tipe gambar agar browser tidak menebak isi file.
+<IfModule mod_mime.c>
+  AddType image/jpeg .jpg .jpeg
+  AddType image/png .png
+  AddType image/webp .webp
+  AddType image/gif .gif
+</IfModule>
